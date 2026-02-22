@@ -1,7 +1,7 @@
-name: "Storcube Bridge"
+name: "batterie_storcube"
 description: "Lien entre Storcube et MQTT"
 version: "1.0.0"
-slug: "storcube-bridge"
+slug: "batterie_storcube"
 arch:
   - aarch64
   - amd64
