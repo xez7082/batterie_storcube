@@ -1,7 +1,7 @@
-name: "storcube-bridge"
+name: "Storcube Stacker Bridge"
 description: "Lien entre Storcube et MQTT"
 version: "1.0.0"
-slug: "storcube-bridge"
+slug: "batterie_storcube"
 arch:
   - aarch64
   - amd64
@@ -16,8 +16,8 @@ options:
 schema:
   MQTT_BROKER: str
   MQTT_PORT: int
-  MQTT_USERNAME: str?
-  MQTT_PASSWORD: password?
+  MQTT_USERNAME: "str?"
+  MQTT_PASSWORD: "password?"
   LOGIN_NAME: str
   PASSWORD: password
   DEVICE_ID: str
