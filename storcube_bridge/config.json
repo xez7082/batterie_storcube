@@ -1,7 +1,7 @@
 name: "Storcube Stacker Bridge"
 description: "Lien entre Storcube et MQTT"
 version: "1.0.1"
-slug: "storcube_bridge"
+slug: "storcube-bridge"
 startup: services
 boot: auto
 arch:
