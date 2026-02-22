@@ -1,0 +1,17 @@
+# Configuration personnelle (contient tes mots de passe)
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# Docker
+.docker_temp/
+
+# OS
+.DS_Store
+Thumbs.db
