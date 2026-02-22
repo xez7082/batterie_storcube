@@ -1,3 +1,9 @@
 name: "Mon dépôt Storcube"
 url: "https://github.com/xez7082/batterie_storcube"
 maintainer: "xez7082"
+
+addons:
+  - name: "Storcube Bridge"
+    slug: "storcube_bridge"
+    description: "Bridge MQTT pour batterie Storcube"
+    version: "1.0.0"
