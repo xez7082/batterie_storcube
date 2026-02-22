@@ -1,0 +1,1 @@
+DOMAIN = "storcube_bridge"
