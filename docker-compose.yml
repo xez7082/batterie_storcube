@@ -1,32 +1,12 @@
-version: '3.8'
-
 services:
   storcube-bridge:
-    # Construit l'image à partir du Dockerfile présent dans le dossier
-    build: .
-    
-    # Nom du conteneur affiché dans Docker / Portainer
+    build: ./storcube-bridge  # <--- On ajoute le chemin du dossier ici
     container_name: storcube-stacker-bridge
-    
-    # Redémarre automatiquement le script en cas de crash ou de reboot du serveur
     restart: unless-stopped
-    
-    # Charge les variables sensibles depuis le fichier .env (MQTT_BROKER, DEVICE_ID, etc.)
     env_file:
       - .env
-
-    environment:
-      # Assure que les logs Python s'affichent en temps réel dans la console
-      - PYTHONUNBUFFERED=1
-      # Optionnel : Forcer le fuseau horaire pour des logs à la bonne heure
-      - TZ=Europe/Paris
-
-    # Limite la taille des logs pour protéger l'espace disque
     logging:
       driver: "json-file"
       options:
         max-size: "10m"
         max-file: "3"
-
-    # Réseau : utilise le mode "bridge" par défaut (ou "host" si besoin spécifique de découverte réseau)
-    network_mode: bridge
