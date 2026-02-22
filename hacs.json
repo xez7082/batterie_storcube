@@ -1,8 +1,13 @@
 {
   "name": "Storcube Bridge",
+  "description": "Integration MQTT pour batterie Storcube",
   "content_in_root": false,
-  "domains": ["storcube_bridge"],
-  "zip_release": false,
+  "domains": [
+    "storcube_bridge"
+  ],
+  "country": ["FR"],
+  "homeassistant": "2024.1.0",
+  "iot_class": "local_polling",
   "filename": "custom_components/storcube_bridge/manifest.json",
   "version": "1.0.3"
 }
