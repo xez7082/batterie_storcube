@@ -1,12 +1,28 @@
+version: '3.8'
+
 services:
   storcube-bridge:
-    build: ./storcube-bridge  # <--- On ajoute le chemin du dossier ici
+    # On indique à Docker d'aller chercher le Dockerfile dans le sous-dossier
+    build: 
+      context: ./storcube-bridge
+      dockerfile: Dockerfile
+    
     container_name: storcube-stacker-bridge
     restart: unless-stopped
+    
+    # Charge les variables depuis le fichier .env à la racine
     env_file:
       - .env
+
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TZ=Europe/Paris
+
+    # Protection contre le remplissage du disque par les logs
     logging:
       driver: "json-file"
       options:
         max-size: "10m"
         max-file: "3"
+
+    network_mode: bridge
