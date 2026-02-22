@@ -1,5 +1,5 @@
 name: "Storcube Stacker Bridge"
-description: "Récupère les données des batteries Storcube Stacker via WebSocket et les envoie vers MQTT."
+description: "Récupère les infos de la batterie Storcube"
 version: "1.0.0"
 slug: "storcube_stacker_bridge"
 arch:
@@ -10,16 +10,14 @@ init: false
 options:
   MQTT_BROKER: "192.168.1.XX"
   MQTT_PORT: 1883
-  MQTT_USERNAME: "mqtt_user"
-  MQTT_PASSWORD: "mqtt_password"
-  LOGIN_NAME: "votre_email"
-  PASSWORD: "votre_password"
-  DEVICE_ID: "votre_id"
+  LOGIN_NAME: ""
+  PASSWORD: ""
+  DEVICE_ID: ""
 schema:
   MQTT_BROKER: str
   MQTT_PORT: int
-  MQTT_USERNAME: str
-  MQTT_PASSWORD: str
+  MQTT_USERNAME: str?
+  MQTT_PASSWORD: password?
   LOGIN_NAME: str
-  PASSWORD: str
+  PASSWORD: password
   DEVICE_ID: str
