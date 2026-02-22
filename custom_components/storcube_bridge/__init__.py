@@ -1,6 +1,9 @@
-from homeassistant.core import HomeAssistant
+import logging
 
 DOMAIN = "storcube_bridge"
 
-async def async_setup(hass: HomeAssistant, config: dict):
+_LOGGER = logging.getLogger(__name__)
+
+async def async_setup(hass, config):
+    _LOGGER.info("Storcube Bridge integration loaded")
     return True
